@@ -43,7 +43,7 @@ jobs:
           tag=$(git describe --tags --abbrev=0)
           release_name="App-$tag-${{ matrix.target }}"
           # Build everything
-          dotnet publish ./src/TPHChristmasRPC.csproj -c Release -r "${{ matrix.target }}" -p:PublishReadyToRun=true --self-contained true /p:PublishSingleFile=true -o "$release_name"
+          dotnet publish ./src/TPHChristmasRPC.csproj -c Release -r "${{ matrix.target }}" --self-contained true /p:PublishSingleFile=true -o "$release_name"
           # Pack files
           if [ "${{ matrix.target }}" == "win-x64" ]; then
             # Pack to zip for Windows
