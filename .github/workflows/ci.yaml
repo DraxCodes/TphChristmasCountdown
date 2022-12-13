@@ -13,21 +13,21 @@ jobs:
     name: Release
     strategy:
       matrix:
-        kind: ['linux', 'windows', 'macOS']
+        kind: ['linux', 'windows', 'macOS', 'arm64']
         include:
           - kind: linux
             os: ubuntu-latest
             target: linux-x64
           - kind: windows
-            os: windows-latest
+            os: ubuntu-latest
             target: win-x64
           - kind: macOS
-            os: macos-latest
+            os: ubuntu-latest
             target: osx-x64
           - kind: arm64
             os: ubuntu-latest
             target: linux-arm64
-    runs-on: ${{ matrix.os }}
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v1
