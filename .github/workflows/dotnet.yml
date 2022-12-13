@@ -26,6 +26,6 @@ jobs:
       with:
         dotnet-version: ${{ matrix.dotnet-version }}
     - name: Restore dependencies
-      run: dotnet restore .\src\TPHChristmasRPC.csproj
+      run: dotnet restore ./src/TPHChristmasRPC.csproj
     - name: Build
-      run: dotnet build .\src\TPHChristmasRPC.csproj --configuration Release --no-restore
+      run: dotnet build ./src/TPHChristmasRPC.csproj --configuration Release --no-restore
