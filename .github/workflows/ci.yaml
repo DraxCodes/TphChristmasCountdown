@@ -4,8 +4,10 @@
 name: Publish
 
 on:
-  release:
-    types: [published, created, edited]
+  push:
+    tags:
+      - "V*.*.*"
+    
 jobs:
   release:
     name: Release
