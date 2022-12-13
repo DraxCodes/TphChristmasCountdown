@@ -8,12 +8,10 @@ namespace BlazeRPC
     {
         private readonly DiscordRpcClient _client;
         private readonly ILogger _logger;
-        private readonly Config _config;
 
-        public RPCClient(DiscordRpcClient client, Config config)
+        public RPCClient(DiscordRpcClient client)
         {
             _client = client;
-            _config = config;
             _logger = Log.ForContext<RPCClient>();
 
             SetupEvents();
@@ -40,32 +38,23 @@ namespace BlazeRPC
             _logger.Information("Client Initialized: {0}", _client.IsInitialized);
 
             _logger.Information("Setting up buttons");
-            var buttons = new List<Button>();
-            
-            if (_config.Buttons.Count >= 1)
-            {
-                foreach (var button in _config.Buttons)
-                {
-                    buttons.Add(new Button
-                    {
-                        Label = button.Name,
-                        Url = button.Url,
-                    });
-                }
-            }
 
             _client.SetPresence(new RichPresence()
             {
-                Details = _config.Details,
+                Details = "Member @ TPH",
                 State = $"Christmas in {DaysUnitilChristmas()}",
                 Assets = new Assets()
                 {
-                    LargeImageKey = _config.LargeImageName,
-                    LargeImageText = _config.LargeImageAlt,
-                    SmallImageKey = _config.SmallImageName,
-                    SmallImageText = _config.SmallImageAlt,
+                    LargeImageKey = "tph_christmas",
+                    LargeImageText = "TPH Christmas Logo",
+                    SmallImageKey = "blaze",
+                    SmallImageText = "Blaze Logo",
                 },
-                Buttons = buttons.ToArray(),
+                Buttons = new Button[]
+                {
+                    new Button { Label= "Join The Programmers Hangout", Url = "https://discord.gg/programming"},
+                    new Button { Label = "View The Website", Url = "https://theprogrammershangout.com/"}
+                },
             });
 
             var timer = new System.Timers.Timer(1000);
@@ -73,16 +62,20 @@ namespace BlazeRPC
             {
                 _client.SetPresence(new RichPresence()
                 {
-                    Details = _config.Details,
+                    Details = "Member @ TPH",
                     State = $"Christmas in {DaysUnitilChristmas()}",
                     Assets = new Assets()
                     {
-                        LargeImageKey = _config.LargeImageName,
-                        LargeImageText = _config.LargeImageAlt,
-                        SmallImageKey = _config.SmallImageName,
-                        SmallImageText = _config.SmallImageAlt,
+                        LargeImageKey = "tph_christmas",
+                        LargeImageText = "TPH Christmas Logo",
+                        SmallImageKey = "blaze",
+                        SmallImageText = "Blaze Logo",
                     },
-                    Buttons = buttons.ToArray(),
+                    Buttons = new Button[]
+                    {
+                        new Button { Label= "Join The Programmers Hangout", Url = "https://discord.gg/programming"},
+                        new Button { Label = "View The Website", Url = "https://theprogrammershangout.com/"}
+                    },
                 });
             };
 

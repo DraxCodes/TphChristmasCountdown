@@ -11,29 +11,6 @@ namespace BlazeRPC
         {
             try
             {
-                var configManager = new ConfigManager();
-                var config = configManager.GetConfig();
-
-                if (config.Client_ID == "change_me")
-                {
-                    Console.WriteLine("Configeration has not been edited. Please fill out the values for the config.");
-                    Console.WriteLine("Program will now Pause, Press Q to exit");
-                    while (true)
-                    {
-                        var key = Console.ReadKey();
-
-                        if (key.Key == ConsoleKey.Q)
-                        {
-                            Environment.Exit(0);
-                            break;
-                        }
-                        else
-                        {
-                            continue;
-                        }
-                    }
-                }
-
                 Log.Logger = new LoggerConfiguration()
                     .MinimumLevel.Debug()
                     .Enrich.FromLogContext()
@@ -50,9 +27,8 @@ namespace BlazeRPC
                 builder.ConfigureServices(
                     services =>
                         services
-                            .AddSingleton(new DiscordRpcClient(config.Client_ID))
+                            .AddSingleton(new DiscordRpcClient("1012486137148883074"))
                             .AddSingleton<RPCClient>()
-                            .AddSingleton(config)
                         );
 
                 var host = builder.Build();
