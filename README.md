@@ -11,10 +11,10 @@ In the future I will support more runtimes such as ARM. However currently it's n
 
 | Operating System  | Build Status |
 | ------------- | ------------- |
-| Windows  | <img src="https://img.shields.io/github/workflow/status/draxcodes/TphChristmasCountdown/.NET?color=lime&label=Windows&logo=windows&style=for-the-badge" />  |
-| OSX  | <img alt="GitHub Workflow Status" src="https://img.shields.io/github/workflow/status/draxcodes/TphChristmasCountdown/.NET?color=lime&label=OSX&logo=apple&style=for-the-badge">  |
-| Linux | <img alt="GitHub Workflow Status" src="https://img.shields.io/github/workflow/status/draxcodes/TphChristmasCountdown/.NET?color=lime&label=Linux&logo=linux&style=for-the-badge"> |
-| ARM | <img alt="GitHub Workflow Status" src="https://img.shields.io/github/workflow/status/draxcodes/TphChristmasCountdown/.NET?color=lime&label=ARM&logo=arm&style=for-the-badge"> |
+| Windows  | <img src="https://img.shields.io/github/workflow/status/draxcodes/TphChristmasCountdown/.NET?label=Windows&logo=windows&style=for-the-badge" />  |
+| OSX  | <img alt="GitHub Workflow Status" src="https://img.shields.io/github/workflow/status/draxcodes/TphChristmasCountdown/.NET?label=OSX&logo=apple&style=for-the-badge">  |
+| Linux | <img alt="GitHub Workflow Status" src="https://img.shields.io/github/workflow/status/draxcodes/TphChristmasCountdown/.NET?label=Linux&logo=linux&style=for-the-badge"> |
+| ARM | <img alt="GitHub Workflow Status" src="https://img.shields.io/github/workflow/status/draxcodes/TphChristmasCountdown/.NET?label=ARM&logo=arm&style=for-the-badge"> |
 
 ### Setup
 
