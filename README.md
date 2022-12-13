@@ -1,5 +1,4 @@
-<center><img src="https://user-images.githubusercontent.com/1976592/207449632-158f4bd1-a02b-44c3-b967-0cfc36c1d8e5.png" /></center>
-
+<center><img src="https://user-images.githubusercontent.com/1976592/207449632-158f4bd1-a02b-44c3-b967-0cfc36c1d8e5.png" />
 
 ### TPH Christmas Countdown
 This is a console based RPC (Rich presence) application. It will simply display some button that link to The Programmers Hangout discord server and their website.
@@ -9,6 +8,13 @@ The main purpose of this is to simply show a countdown until Christmas. It will 
 Currently I am fully supporting both Windows & Linux and semi supporting OSX. I have no way of testing OSX builds so until someone reports if it works or not, your mileage may vary. 
 
 In the future I will support more runtimes such as ARM. However currently it's not available.
+
+| Operating System  | Build Status |
+| ------------- | ------------- |
+| Windows  | <img src="https://img.shields.io/github/workflow/status/draxcodes/TphChristmasCountdown/.NET?color=lime&label=Windows&logo=windows&style=for-the-badge" />  |
+| OSX  | <img alt="GitHub Workflow Status" src="https://img.shields.io/github/workflow/status/draxcodes/TphChristmasCountdown/.NET?color=lime&label=OSX&logo=apple&style=for-the-badge">  |
+| Linux | <img alt="GitHub Workflow Status" src="https://img.shields.io/github/workflow/status/draxcodes/TphChristmasCountdown/.NET?color=lime&label=Linux&logo=linux&style=for-the-badge"> |
+| ARM | <img alt="GitHub Workflow Status" src="https://img.shields.io/github/workflow/status/draxcodes/TphChristmasCountdown/.NET?color=lime&label=ARM&logo=arm&style=for-the-badge"> |
 
 ### Setup
 
